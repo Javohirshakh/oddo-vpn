@@ -1,38 +1,18 @@
-.App {
-  text-align: center;
+/* Контейнер приложения */
+.app-container {
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Основное содержимое скрыто пока показывается сплэш-скрин */
+.main-content.hidden {
+  visibility: hidden;
+  opacity: 0; /* Чтобы контент не мелькал */
+  transition: opacity 0.5s ease-in-out; /* Плавное появление */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* После сплэш-скрина */
+.main-content {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out;
 }
