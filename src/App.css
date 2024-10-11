@@ -1,7 +1,8 @@
 /* Контейнер приложения */
 .app-container {
   position: relative;
-  background-color: #fff!important;
+  background-color: #fff !important;
+  color: #000 !important; /* Принудительно делаем текст черным */
 }
 
 /* Основное содержимое скрыто пока показывается сплэш-скрин */
@@ -16,4 +17,12 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s ease-in-out;
+}
+
+/* Для поддержки светлой темы, даже если включена темная тема */
+@media (prefers-color-scheme: dark) {
+  .app-container {
+    background-color: #fff !important; /* Принудительно белый фон */
+    color: #000 !important; /* Принудительно черный текст */
+  }
 }
