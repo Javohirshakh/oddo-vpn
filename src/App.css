@@ -1,7 +1,7 @@
 /* Контейнер приложения */
 .app-container {
   position: relative;
-  background-color: #fff;
+  background-color: #fff!important;
 }
 
 /* Основное содержимое скрыто пока показывается сплэш-скрин */
