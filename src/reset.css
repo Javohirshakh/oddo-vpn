@@ -10,6 +10,6 @@
     width: 100%;
     background-color: #fff !important; /* Принудительно белый фон */
     color: #000 !important; /* Принудительно черный текст */
-    overflow: hidden;
+    overflow-x: hidden;
   }
   
