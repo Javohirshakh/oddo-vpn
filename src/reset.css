@@ -1,0 +1,15 @@
+/* Сбрасываем все стили по умолчанию */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #fff !important; /* Принудительно белый фон */
+    color: #000 !important; /* Принудительно черный текст */
+    overflow: hidden;
+  }
+  

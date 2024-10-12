@@ -1,40 +1,18 @@
-/* Принудительно делаем белый фон для всего body */
-body, html {
-  background-color: #fff !important;
-  color: #000 !important; /* Принудительно черный текст */
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* Контейнер приложения */
 .app-container {
   position: relative;
-  background-color: #fff !important; /* Принудительно белый фон */
-  color: #000 !important; /* Принудительно черный текст */
-  height: 100%;
   width: 100%;
+  height: 100%;
+  background-color: #fff !important; /* Принудительно белый фон */
 }
 
-/* Основное содержимое скрыто пока показывается сплэш-скрин */
 .main-content.hidden {
   visibility: hidden;
-  opacity: 0; /* Чтобы контент не мелькал */
-  transition: opacity 0.5s ease-in-out; /* Плавное появление */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-/* После сплэш-скрина */
 .main-content {
   opacity: 1;
   visibility: visible;
   transition: opacity 0.5s ease-in-out;
-}
-
-/* Для поддержки светлой темы, даже если включена темная тема */
-@media (prefers-color-scheme: dark) {
-  body, .app-container {
-    background-color: #fff !important; /* Принудительно белый фон */
-    color: #000 !important; /* Принудительно черный текст */
-  }
 }
