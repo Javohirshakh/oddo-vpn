@@ -18,6 +18,7 @@ const App = () => {
         <div className={`main-content`}>
           <Navbar />
           <Routes>
+            <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/settings" element={<SettingsPage />} />

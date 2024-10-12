@@ -51,8 +51,8 @@ const SplashScreen = ({ onFinish }) => {
           ease: "easeInOut", // Плавный переход
         }}
         style={{
-          width: "100px",
-          height: "100px",
+          width: "80px",
+          height: "80px",
           position: "absolute", // Абсолютное позиционирование для центрирования
           top: "50%",
           left: "50%",
