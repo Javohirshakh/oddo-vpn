@@ -1,49 +1,41 @@
-/* Стиль для контейнера навбара */
-.navbar {
+/* Навбар с подчеркиванием активного элемента */
+.navbar-underline {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #000; /* Черный фон */
+    background-color: #111;
     padding: 10px;
-    /* width: 80%; */
-    height: 30px; /* Высота навбара */
-    border-radius: 40px; /* Закругленные края */
-    margin: 0 auto; /* Центрирование навбара */
+    width: 100%;
+    height: 60px;
     position: fixed;
-    left: 10%;
-    right: 10%;
-    bottom: 20px;
+    bottom: 0;
+    left: 0;
   }
   
-  /* Стиль для каждого элемента навбара */
   .navbar-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+    position: relative;
+    padding: 5px;
+    text-decoration: none; /* Убираем стандартное подчёркивание у ссылок */
+    cursor: pointer;
   }
   
-  /* Стиль для иконок */
   .navbar-icon {
     color: white;
-    font-size: 40px; /* Размер иконок */
+    font-size: 30px;
+    transition: color 0.3s;
   }
   
-  /* Для активации центральной иконки (если нужно) */
   .navbar-item.active .navbar-icon {
-    font-size: 50px; /* Увеличиваем иконку, если она активна */
+    color: #ffd700; /* Золотой цвет для активной иконки */
   }
   
-  /* Для точки под центральной иконкой */
   .navbar-item.active::after {
     content: '';
     position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
-    background-color: #fff;
-    border-radius: 50%;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ffd700; /* Подчеркивание активного элемента */
   }
   

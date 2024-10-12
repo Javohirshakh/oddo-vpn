@@ -1,19 +1,34 @@
-import React from 'react';
-import { Restore, Home, Settings } from '@mui/icons-material'; // Импортируем иконки Material UI
-import './Navbar.css'; // Подключаем стили для навбара
+import React, { useState } from 'react';
+import { Restore, Home, Settings } from '@mui/icons-material';
+import { Link } from 'react-router-dom'; // Импортируем Link
+import './Navbar.css'; // Стили
 
 const Navbar = () => {
+  const [active, setActive] = useState('home');
+
   return (
-    <div className="navbar">
-      <div className="navbar-item">
-        <Restore className="navbar-icon" /> {/* Иконка истории */}
-      </div>
-      <div className="navbar-item">
-        <Home className="navbar-icon" /> {/* Иконка дома */}
-      </div>
-      <div className="navbar-item">
-        <Settings className="navbar-icon" /> {/* Иконка настроек */}
-      </div>
+    <div className="navbar-underline">
+      <Link
+        to="/history"
+        className={`navbar-item ${active === 'history' ? 'active' : ''}`}
+        onClick={() => setActive('history')}
+      >
+        <Restore className="navbar-icon" />
+      </Link>
+      <Link
+        to="/home"
+        className={`navbar-item ${active === 'home' ? 'active' : ''}`}
+        onClick={() => setActive('home')}
+      >
+        <Home className="navbar-icon" />
+      </Link>
+      <Link
+        to="/settings"
+        className={`navbar-item ${active === 'settings' ? 'active' : ''}`}
+        onClick={() => setActive('settings')}
+      >
+        <Settings className="navbar-icon" />
+      </Link>
     </div>
   );
 };
